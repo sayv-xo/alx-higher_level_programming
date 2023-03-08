@@ -5,4 +5,3 @@ for i in range(0, 9):
             print('{}{}'.format(i, x), end=", ")
         if i == 8 and i < x:
             print('{}{}'.format(i, x))
-

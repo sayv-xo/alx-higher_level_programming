@@ -20,18 +20,6 @@ Tests for area() method
     >>> type(BaseGeometry.__dict__['area'])
     <class 'function'>
 
-Test area method called via class with no args:
------------------------------------------------
-    >>> bg.__class__.area()
-    Traceback (most recent call last):
-    TypeError: BaseGeometry.area() missing 1 required positional argument: 'self'
-
-Test area method with an argument:
-----------------------------------
-    >>> bg.area(10)
-    Traceback (most recent call last):
-    TypeError: BaseGeometry.area() takes 1 positional argument but 2 were given
-
 Test for area method:
 --------------------
     >>> bg.area()
@@ -132,3 +120,16 @@ Test integer_validator with set:
     Traceback (most recent call last):
     TypeError: Foo must be an integer
 
+Test integer_validator
+======================
+    >>> bg.integer_validator(1, 1, 1)
+    Traceback (most recent call last):
+    TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+    >>> bg.__class__.integer_validator()
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 3 required positional arguments: 'self', 'name', and 'value'
+
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'

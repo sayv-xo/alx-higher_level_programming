@@ -2,7 +2,7 @@
 """A stubborn class"""
 
 
-class MyInt:
+class MyInt(int):
     """A class MyInt"""
     def __eq__(self, other):
         """Reverse true"""

@@ -75,6 +75,35 @@ class Rectangle(Base):
         for i in range(self.height):
             print(" " * self.x + "#" * self.width)
 
+    def update(self, *args, **kwargs):
+        """Update the rectangle"""
+        if args:
+            for a, arg in enumerate(args):
+                if a == 0:
+                    self.id = arg
+                if a == 1:
+                    self.width = arg
+                if a == 2:
+                    self.height = arg
+                if a == 3:
+                    self.x = arg
+                if a == 4:
+                    self.y = arg
+
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+
+    def to_dictionary(self):
+        """ Dictionary Representation of Rectangle class """
+        dict = {}
+        dict["id"] = self.id
+        dict["height"] = self.height
+        dict["width"] = self.width
+        dict["x"] = self.x
+        dict["y"] = self.y
+        return dict
+
     def __str__(self):
         """Displays the rectangle details"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y,

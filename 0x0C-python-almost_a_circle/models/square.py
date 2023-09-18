@@ -28,12 +28,10 @@ class Square(Rectangle):
                 if a == 0:
                     self.id = arg
                 if a == 1:
-                    self.width = arg
+                    self.size = arg
                 if a == 2:
-                    self.height = arg
-                if a == 3:
                     self.x = arg
-                if a == 4:
+                if a == 3:
                     self.y = arg
 
         else:
@@ -44,13 +42,12 @@ class Square(Rectangle):
         """ Dictionary Representation of Square class """
         dict = {}
         dict["id"] = self.id
-        dict["height"] = self.height
-        dict["width"] = self.width
+        dict["size"] = self.size
         dict["x"] = self.x
         dict["y"] = self.y
         return dict
 
     def __str__(self):
         """Displays the rectangle details"""
-        return "[Square] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y,
-                                                    self.width, self.height)
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x,
+                                                 self.y, self.size)

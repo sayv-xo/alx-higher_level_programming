@@ -17,4 +17,4 @@ if __name__ == "__main__":
             print('{}'.format(state.id))
             index = 1
     if not index:
-        print("Not Found")
+        print("Not found")

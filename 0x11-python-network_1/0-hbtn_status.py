@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# fetch a request
+"""fetch a request from a site """
 if __name__ == '__main__':
     from urllib.request import urlopen
     with urlopen("https://alx-intranet.hbtn.io/status") as response:

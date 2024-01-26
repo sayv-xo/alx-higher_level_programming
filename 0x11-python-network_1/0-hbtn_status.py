@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 # fetch a request
-from urllib.request import urlopen
-with urlopen("https://alx-intranet.hbtn.io/status") as response:
-    body = response.read()
-    output = f"Body response:\n\t- type: {type(body)}\n\t- content: {body}\n\
-    \t- utf8 content: {bytes.decode(body)}"
-    print(output)
+if __name__ == '__main__':
+    from urllib.request import urlopen
+    with urlopen("https://alx-intranet.hbtn.io/status") as response:
+        body = response.read()
+        print("Body response:")
+        print("\t- type: {}".format(type(body)))
+        print("\t- content: {}".format(body))
+        print("\t- utf8 content: {}".format(body.decode("utf-8")))
